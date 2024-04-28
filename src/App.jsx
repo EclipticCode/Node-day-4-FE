@@ -8,6 +8,8 @@ const App = () => {
     password : ""
   })
    console.log(formState , "formState")
+   console.log(import.meta.env.NODE_APP_ENV)
+
 
   const handleInputChange = (event) => {
     console.log(event, "event");
@@ -26,7 +28,7 @@ const App = () => {
   };
    const handleCreate = () => {
     // http://localhost:4001/createSign?username=kumar&password=kumar123
-    axios.get(`http://localhost:4001/createSign?username=${formState.username}&password=${formState.password}`)
+    axios.get(`https://node-day-4-1.onrender.com//createSign?username=${formState.username}&password=${formState.password}`)
    }
   return (
     <div>
